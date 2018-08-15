@@ -1,0 +1,11 @@
+<div class="card"> <!--style="width: 18rem;"-->
+  <img class="card-img-top img-responsive" [src]="movie.Poster" [alt]="movie.Title">
+  <div class="card-body">
+    <h5 class="card-title">{{movie.Title}}</h5>
+    <h6 class="card-subtitle mb-2">Type: {{movie.Type}}</h6>
+    <p class="card-text">Release year: {{movie.Year}}</p>
+    <a (click)="goToDetails()" class="card-link text-primary" style="cursor:pointer"><small>Movie details</small></a>
+    <a class="card-link text-primary" (click)="onPurchaseActions()" style="cursor:pointer">
+      <small>{{purchasedForTemplate()?'Unpurchase':'Purchase'}}</small></a>
+  </div>
+</div>

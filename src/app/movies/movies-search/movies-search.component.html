@@ -1,0 +1,31 @@
+<div class="row ml-5">
+  <div class="col-xs-10 offset-xs-1">
+    <form class="form-inline" role="search" (ngSubmit)="onSearch(f)" #f="ngForm">
+      <div class="row">
+        <div class="col-xs-10 offset-xs-1 mt-3">
+          <div class="form-group d-inline">
+            <label for="title" class="d-inline mr-2">Movie title</label>
+            <input class="form-control d-inline mr-2" ngModel name="movieTitle" type="text" required
+              placeholder="Enter a movie title"/>
+          </div>
+          <div class="form-group d-inline">
+            <label for="type" class="d-inline mr-2">Type</label>
+            <select class="form-control d-inline mr-2" ngModel name="movieType" id="type">
+              <option selected value="">Any</option>
+              <option value="movie">Movie</option>
+              <option value="series">Series</option>
+              <option value="episode">Episode</option>
+            </select>
+          </div>
+          <div class="form-group d-inline">
+            <label for="year" class="d-inline mr-2">Year</label>
+            <input class="form-control d-inline mr-2" type="text" placeholder="Year of release" name="releaseYear"
+              ngModel number/>
+          </div>
+        </div>
+        <button class="btn btn-primary ml-2 mt-2" type="submit">Search</button>
+        <button class="btn btn-secondary ml-2 mt-2" type="button" (click)="onClear()">Clear</button>
+      </div>
+    </form>
+  </div>
+</div>

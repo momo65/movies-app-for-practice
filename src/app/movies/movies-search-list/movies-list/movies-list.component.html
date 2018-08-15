@@ -1,0 +1,5 @@
+<div class="row ">
+  <div class="col-xs-4 col-md-3 ml-20 mt-4" *ngFor="let movie of movies;let i=index"><!--we can add class="card-deck"-->
+    <app-movie-item [movie]="movie" [index]="i"></app-movie-item>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<nav class="navbar navbar-secondary navbar-expand-sm bg-secondary">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a routerLink="/" class="navbar-brand">Movies app</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#moviesNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="moviesNav">
+      <ul class="navbar-nav nav">
+        <li routerLinkActive="active" class="nav-item"><a routerLink="/movies" class="nav-link">Movies</a></li>
+      </ul>
+    </div>
+    <div class="float-right">
+      <ul class="navbar-nav nav mr-3">
+        <li routerLinkActive="active" class="nav-item"><a routerLink="/movies/purchased"
+          class="nav-link">Purchased movies</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,19 @@
+<a (click)="detailItem()"
+  routerLinkActive="active"
+  style="cursor:pointer;"
+  class="list-group-item list-group-item-info clearfix list-group-item-action">
+  <div class="row">
+    <div class="col-xs-6 w-50">
+      <p class="list-group-item-heading lead text-justify font-weight-bold w-96">{{movie.Title}}</p>
+      <p class="list-group-item-text w-96">{{movie.Type+' - '+ movie.Year}}</p>
+    </div>
+    <div class="offset-xs-4 imgDiv">
+      <span>
+        <img [src]="movie.Poster"
+          alt="{{movie.Title}}"
+          class="img-responsive"
+          style="max-height:50px;">
+       </span>
+    </div>
+  </div>
+</a>

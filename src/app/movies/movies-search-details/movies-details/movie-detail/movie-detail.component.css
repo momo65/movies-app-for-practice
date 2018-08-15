@@ -1,0 +1,17 @@
+.detailDiv {
+    background-color: #f1f1f1;
+    padding: 6px 10px;
+    margin: 4px 0;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
+.imRatingDiv{
+  position:relative;
+  left:2%;
+}
+.imVotesDiv{
+  position:relative;
+  left:21%
+}
+li{
+  border: none;
+}

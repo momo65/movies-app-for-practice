@@ -1,0 +1,5 @@
+<div class="row">
+  <div class="col-xs-5 ml-5 mt-5" *ngFor="let pMovie of purchasedMovies;let i=index"><!--we can add class="card-deck"-->
+    <app-movie-purchased-item [pMovie]="pMovie" [index]="i"></app-movie-purchased-item>
+  </div>
+</div>

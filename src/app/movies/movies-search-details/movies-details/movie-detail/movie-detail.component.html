@@ -1,0 +1,75 @@
+<div class="detailDiv mt-sm-1 mb-sm-1">
+  <ul class="list-group mt-2" *ngIf="movieDetail">
+    <li class="list-group-item">
+      <div class="d-inline imRatingDiv" *ngIf="movieDetail['imdbRating']!='N/A'">
+        <h6 class="list-group-item-heading d-inline font-weight-bold">IMDB rating: </h6>
+        <p class="list-group-item-text lead text-justify d-inline">{{movieDetail['imdbRating']}}</p></div>
+      <div class="d-inline imVotesDiv" *ngIf="movieDetail['imdbVotes']!='N/A'">
+        <h6 class="list-group-item-heading d-inline font-weight-bold">IMDB votes: </h6>
+        <p class="list-group-item-text lead text-justify d-inline">{{movieDetail['imdbVotes']}}</p></div>
+      <span class="d-inline float-right mr-1">
+        <img [src]="movieDetail.Poster"
+          alt="{{movieDetail.Title}}"
+          class="img-responsive"
+          style="height:160px;width:160px;">
+       </span>
+    </li>
+    <li class="list-group-item bg-transparent">
+      <h5 class="list-group-item-heading d-inline">Title: </h5>
+      <p class="list-group-item-text lead text-justify d-inline">{{movieDetail['Title']}}</p>
+    </li>
+    <li class="list-group-item" *ngIf="movieDetail['Type']!='N/A'">
+      <h5 class="list-group-item-heading d-inline">Type: </h5><p class="list-group-item-text lead text-justify d-inline">
+        {{movieDetail['Type']}}</p>
+    </li>
+    <li class="list-group-item" *ngIf="movieDetail['Year']!='N/A'">
+      <h5 class="list-group-item-heading d-inline">Year: </h5><p class="d-inline list-group-item-text lead text-justify">
+        {{movieDetail['Year']}}</p>
+    </li>
+    <li class="list-group-item" *ngIf="movieDetail['Country']!='N/A'">
+      <h5 class="list-group-item-heading d-inline">Country: </h5><p class="d-inline list-group-item-text lead text-justify">
+        {{movieDetail['Country']}}</p>
+    </li>
+    <li class="list-group-item" *ngIf="movieDetail['Language']!='N/A'">
+      <h5 class="list-group-item-heading d-inline">Language: </h5><p class="d-inline list-group-item-text lead text-justify">
+        {{movieDetail['Language']}}</p>
+    </li>
+    <li class="list-group-item" *ngIf="movieDetail['Runtime']!='N/A'">
+      <h5 class="list-group-item-heading d-inline">Runtime: </h5><p class="d-inline list-group-item-text lead text-justify">
+        {{movieDetail['Runtime']}}</p>
+    </li>
+    <li class="list-group-item" *ngIf="movieDetail['Writer']!='N/A'">
+      <h5 class="list-group-item-heading d-inline">Writer: </h5><p class="d-inline list-group-item-text lead text-justify">
+        {{movieDetail['Writer']}}</p>
+    </li>
+    <li class="list-group-item" *ngIf="movieDetail['Director']!='N/A'">
+      <h5 class="list-group-item-heading d-inline">Director: </h5><p class="d-inline list-group-item-text lead text-justify">
+        {{movieDetail['Director']}}</p>
+    </li>
+    <li class="list-group-item" *ngIf="movieDetail['Genre']!='N/A'">
+      <h5 class="list-group-item-heading d-inline">Genre: </h5><p class="d-inline list-group-item-text lead text-justify">
+        {{movieDetail['Genre']}}</p>
+    </li>
+    <li class="list-group-item" *ngIf="movieDetail['Actors']!='N/A'">
+      <h5 class="list-group-item-heading d-inline">Actors: </h5><p class="list-group-item-text lead text-justify d-inline">
+        {{movieDetail['Actors']}}</p>
+    </li>
+    <li class="list-group-item" *ngIf="movieDetail['Awards']!='N/A'">
+      <h5 class="list-group-item-heading d-inline">Awards: </h5><p class="d-inline list-group-item-text lead text-justify">
+        {{movieDetail['Awards']}}</p>
+    </li>
+    <li class="list-group-item" *ngIf="movieDetail['BoxOffice']!='N/A'">
+      <h5 class="list-group-item-heading d-inline">Box Office: </h5><p class="d-inline list-group-item-text lead text-justify">
+        {{movieDetail['BoxOffice']}}</p>
+    </li>
+    <li class="list-group-item" *ngIf="movieDetail['Ratings']!=undefined">
+      <h5 class="list-group-item-heading d-inline">Ratings: </h5><p class="d-inline list-group-item-text lead text-justify"
+        *ngFor="let rating of movieDetail['Ratings'];let r=index">
+        {{rating.Source+': '+rating.Value+(r<(movieDetail['Ratings'].length-1)?'   -   ':'')}}</p>
+    </li>
+    <li class="list-group-item" *ngIf="movieDetail['Production']!='N/A'">
+      <h5 class="list-group-item-heading d-inline">Production: </h5><p class="d-inline list-group-item-text lead text-justify">
+        {{movieDetail['Production']}}</p>
+    </li>
+  </ul>
+</div>

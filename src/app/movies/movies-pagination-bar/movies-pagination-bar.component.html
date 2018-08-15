@@ -1,0 +1,9 @@
+<div class="container mt-2" *ngIf="totalResults!=0">
+  <div class="row">
+    <div class="col-xs-2 paginationDiv">
+      <ngb-pagination [collectionSize]="totalResults" [(page)]="page" [maxSize]="10"
+        [boundaryLinks]="true" [rotate]="true" [ellipses]="true" [pageSize]="10" [directionLinks]="true"
+        (pageChange)="onPageChange()"></ngb-pagination>
+    </div>
+  </div>
+</div>

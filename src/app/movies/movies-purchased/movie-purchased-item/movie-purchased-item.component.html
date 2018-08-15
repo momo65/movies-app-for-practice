@@ -1,0 +1,12 @@
+<div class="card"> <!--style="width: 18rem;"-->
+  <img class="card-img-top img-responsive" [src]="pMovie.Poster" [alt]="'Image of movie number '+(index+1)">
+  <div class="card-body">
+    <h5 class="card-title">{{pMovie.Title}}</h5>
+    <h6 class="card-subtitle mb-2">Type: {{pMovie.Type}}</h6>
+    <p class="card-text">Release year: {{pMovie.Year}}</p>
+    <a (click)="goDetails()" class="card-link text-primary" style="cursor:pointer">
+      <small>Movie details</small></a>
+    <a class="card-link text-primary" (click)="onUnpurchase()" style="cursor:pointer">
+      <small>Unpurchase</small></a>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="row mt-5 no-gutters ml-2">
+  <div class="col-xs-1">
+    <app-movie-detail-item *ngFor="let movie of movies;let i=index" [movie]="movie" [index]="i"></app-movie-detail-item>
+  </div>
+  <div class="col-xs-10 ml-4 w-100">
+    <app-movie-detail></app-movie-detail>
+  </div>
+</div>
