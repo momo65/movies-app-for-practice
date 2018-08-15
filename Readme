@@ -1,0 +1,2 @@
+Here's the website of the movies API: http://www.omdbapi.com/ 
+You might need to get an API key from that website and integrate it in the HttpClient calls instead of my API key. 
